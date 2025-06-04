@@ -16,3 +16,14 @@ endpoint for sending and receiving notifications.
 
 Connect to `ws://localhost:8000/ws/notifications` from a websocket client
 to send and receive messages.
+
+## Running with Docker
+
+1. Build the Docker image:
+   ```bash
+   docker build -t fastapi-notification .
+   ```
+2. Run the container:
+   ```bash
+   docker run -p 8000:8000 fastapi-notification
+   ```
