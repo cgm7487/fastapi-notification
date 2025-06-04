@@ -17,6 +17,26 @@ endpoint for sending and receiving notifications.
 Connect to `ws://localhost:8000/ws/notifications` from a websocket client
 to send and receive messages.
 
+## Managing packages with uv
+
+You can use the [uv](https://github.com/astral-sh/uv) tool to manage your
+Python environment. The following example creates a virtual environment and
+installs the project requirements using uv:
+
+```bash
+# create a new virtual environment in .venv
+uv venv .venv
+
+# activate the environment (bash/zsh)
+source .venv/bin/activate
+
+# install the dependencies with uv's pip wrapper
+uv pip install -r requirements.txt
+
+# run the server through uv
+uv run uvicorn app.main:app --reload
+```
+
 ## Running with Docker
 
 1. Build the Docker image:
